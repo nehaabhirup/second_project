@@ -1,0 +1,25 @@
+.register_box{
+    border: 1px solid lightgrey;
+    margin-top: 4%;
+}
+.registerHeading{
+    border: 1px solid lightgrey;
+    height: 40px;
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+}
+.registerBody{
+    height: 180px;
+}
+.btn-register{
+    background-color:lightskyblue;
+    margin-top: 8px;
+}
+.loginBody{
+    height:120px ;
+}
+.btnLogin{
+    margin-top: 8px;
+}

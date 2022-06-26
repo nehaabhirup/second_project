@@ -1,0 +1,167 @@
+.img-container{
+    height: 389px;
+    width: 100%;
+}
+.cardDiv{
+    width:212px;
+}
+.tile-div{
+    height: 390px;
+}
+.dropBtn{
+    height: 40px;
+    width: 75%;
+    margin-left: 2px;
+    font-size: 14px;
+    font-weight: 500; 
+    padding-left: 5px;
+}
+#price{
+    height: 27px;
+    width: 70px;
+    margin-top: 6px;
+    border: none;
+    margin-left: 6px;
+}
+.delivery{
+    height: 25px;
+    width: 70%;
+    font-size: 12px;
+}
+.time{
+    height: 25px;
+    width: 70%;;
+    font-size: 12px;
+}
+#inputext{
+    height: 23px;
+    width: 28px;
+    text-align: center;
+    position: relative;
+    margin-top: 4px;
+    font-size: 12px;
+}
+.qty{
+    height: 23px;
+    width: 40px;
+    position: relative;
+    font-size: 14px;
+}
+.btnAdd{
+    height: 23px;
+    width: 57px;
+    font-size: 11px;
+    margin-left: 4px;
+    background-color: #ffc40c;
+    border: none;
+    padding: 1px 1px;
+}
+.btnSize{
+    width: 170px;
+    border: 1px solid black;
+}
+.show-btn{
+    height: 28px;
+    width: 7%;
+    border: none;
+    font-size: 13px;
+    margin-top: 1%;
+    float: right;
+    margin-right: 5px;
+    background-color: lightgreen;
+}
+.card{
+    float:left;
+    margin-left: 8px;
+    margin-top: 1%;
+}
+
+.card:hover{
+    border:1px solid gray;
+}
+.card-img-top{
+    height: 150px;
+}
+.title{
+    text-align: center;
+    margin: auto;
+    width: 27%;
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: 500;
+}
+.card-body{
+    width: 265px;
+}
+.myDiv{
+    height: 200px;
+    width: 24%;
+    float: left;
+    margin-left: 8px;
+    margin-top: 1%;
+}
+.myDiv > img{
+    border: 1px solid #CCD1D1;
+    border-radius: 4px;
+}
+.myDiv > img:hover{
+    border: 1px groove #707B7C;
+}
+.myDiv1{
+    height: 195px;
+    width: 16%;
+    float: left;
+    margin-left: 6px;
+    margin-top: 1%;
+}
+.myDiv1 > img{
+    border-radius: 4px;
+}
+.myDiv1 > img:hover{
+    border: 1px solid #CCD1D1;
+}
+.popular{
+    height:310px;
+}
+.topOffer{
+    height: 300px;
+}
+.offer{
+    height: 230px;
+    width: 100%;
+}
+.dailyStaples{
+    height: 250px;
+}
+.daily{
+    height: 230px;
+    width: 100%;
+}
+.snacksStore{
+    height: 280px;
+}
+.snacks{
+    height: 214px;
+    width: 100%;
+}
+.household{
+    height: 280px;
+}
+.house{
+    height: 214px;
+    width: 100%;
+}
+.beauty{
+    height: 280px;
+}
+.hygiene{
+    height: 214px;
+    width: 100%;
+}
+.kitchen{
+    height: 300px;
+}
+.essentials{
+    height: 230px;
+    width: 100%;
+}
