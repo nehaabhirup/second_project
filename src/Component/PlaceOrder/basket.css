@@ -1,0 +1,18 @@
+.orderItems{
+    float:left;
+    height:250px;
+    width:280px;
+    margin:2%;
+    box-shadow:10px 10px 20px gray;
+}
+
+.orderItems>img{
+   height:180px;
+   width:100%
+}
+.priceDiv{
+    margin-left: 2%;
+}
+.costBtn{
+    margin-left: 2%;
+}

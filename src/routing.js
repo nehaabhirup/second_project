@@ -5,18 +5,21 @@ import Footer from './Footer';
 import Home from './Component/Home/Home';
 import Listing from './Component/listing1/listing';
 import Product from './Component/listing2/products';
-import ItemDetails from './Component/details/itemDetails';
+import Basket from './Component/PlaceOrder/basket';
+import ViewOrder from './Component/PlaceOrder/viewOrder';
 import Login from './Component/login/loginComponent';
 import Register from './Component/login/registerComponent'
 
 const Routing = () => {
+   
     return(
         <BrowserRouter>
             <Header/>
                 <Route exact path="/" component={Home}/>
                 <Route path="/listing" component={Listing}/>
                 <Route path="/products/:id" component={Product}/>
-                <Route path="/viewDetails" component={ItemDetails}/>
+                <Route path="/myBasket" component={Basket}/>
+                <Route path="/viewBooking" component={ViewOrder}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>
             <Footer/>

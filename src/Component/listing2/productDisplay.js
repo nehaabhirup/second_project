@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 
 const ProductDisplay = (props) => {
 
@@ -11,7 +10,7 @@ const ProductDisplay = (props) => {
                         <div key={item.product_id}>
                             <div className="tileDiv">
                                 <div className='imgDiv'>
-                                <Link to={`/viewDetails?prodId=${item.prod_id}`}><img src={item.image_url} className="Image" alt="item-img"/></Link>
+                                    <img src={item.image_url} className="Image" alt="item-img"/>
                                 </div>
                                 <div className='contentDiv'>
                                     <div className='img_name'>
