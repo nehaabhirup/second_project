@@ -62,9 +62,7 @@ class Basket extends Component{
                       <center><h4>My Basket</h4></center>  
                     </div>
                     <div className='cartBody'>
-                        <form action="https://mpaymentapp.herokuapp.com/paynow" method="POST">
-                        <input type="hidden" name="cost" value={this.state.cost}/>
-                        <input type="hidden" name="id" value={this.state.id}/>
+                    
                         <div className="row">
                             <div className="form-group col-md-6">
                                 <label for="fname">Name</label>
@@ -94,7 +92,7 @@ class Basket extends Component{
                             </div>
                         </div>
                         <div className='costBtn'><button className='btn btn-success' onClick={this.checkout}>CheckOut</button></div>
-                        </form>
+                        
                     </div>
             </div>
         )
