@@ -51,8 +51,8 @@ class Basket extends Component{
             },
             body:JSON.stringify(obj)
         })
-        //.then(this.props.history.push('/viewBooking'))
-        .then(console.log('order Added'))
+        .then(this.props.history.push('/viewBooking'))
+        //.then(console.log('order Added'))
     } 
     render(){
         return(
@@ -92,7 +92,7 @@ class Basket extends Component{
                             </div>
                         </div>
                         <div className='costBtn'><button className='btn btn-success' onClick={this.checkout}>CheckOut</button></div>
-                        
+        
                     </div>
             </div>
         )
