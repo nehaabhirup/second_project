@@ -10,13 +10,6 @@ class ListingDisplay extends Component {
         this.props.finalOrder(this.orderId)
     }
 
-    removeOrder = (id) => {
-        if(this.orderId.indexOf(id) > -1){
-            this.orderId.splice(this.orderId.indexOf(id),1)
-        }
-        this.props.finalOrder(this.orderId)
-    }
-
     renderCart = (orders) => {
         if(orders){
             return orders.map((item,index) => {
@@ -50,9 +43,7 @@ class ListingDisplay extends Component {
                                     <div className='time'>{item.time}</div>
                                     <div className='addbtn'>
                                         <button className='btn btn-success' 
-                                        onClick={() => {this.placeOrder(item.list_Id)}}><i className="bi bi-plus"></i></button>
-                                        <button className='btn btn-danger'
-                                        onClick={() => {this.removeOrder(item.list_Id)}}><i className="bi bi-dash"></i></button>
+                                        onClick={() => {this.placeOrder(item.list_Id)}}>Add</button>
                                     </div>
                                 </div>
                             </div>

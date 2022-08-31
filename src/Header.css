@@ -3,6 +3,7 @@ header{
     width: 100%;
     background-color:#FFFFFF;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: 1px solid black;
 }
 #icon{
     height: 50px;
@@ -28,10 +29,41 @@ span{
     margin-top: 2%;
 }
 .btnclass{
-    margin-top: 3%;
-    text-decoration: none;
-    color: black;
+    margin-top: 2.4%;
+}
+.dropDown{
+    border: 1px solid black;
+    float: left;
+    width: 125px;
+    height: 40px;
+    margin-top: 2%;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    width: 125px;
+    height: 38px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-content {
+    background-color: #f9f9f9;
+    position: absolute;
+    display: none;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropDown:hover .dropdown-content {
+    display: block;
 }
 .btnlogin{
-    display:inline-block;
+    display: inline-block;
+    height: 50px;
+    width: 80px;
+}
+.cartButton{
+    float: right;
+    margin-left: 8px;
 }

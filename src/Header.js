@@ -20,6 +20,12 @@ class Header extends Component{
     this.setState({userData:''})
     this.props.history.push('/')
 }
+    
+
+    proceed = () => {
+        sessionStorage.getItem('items');
+    }
+
    conditionalHeader=() => {
         if(this.state.userData.name){
             let data = this.state.userData;
@@ -30,7 +36,7 @@ class Header extends Component{
                 <>
                     <div className="btnlogin">
                         <Link to="/" className="btn btn-success">
-                            <span className="glyphicon glyphicon-user"></span> Hi {data.name}
+                            <span className="glyphicon glyphicon-user"></span>{data.name}
                         </Link>
                     </div> &nbsp;
                     <div className="btnlogin">
@@ -62,13 +68,25 @@ class Header extends Component{
         return(
             <header>
                 <div id="icon">
-                   <span><img src="https://i.ibb.co/31Yfwpm/f-letter.png"/></span>
-                   <span><h1>Foodigo</h1></span>
+                    <span><img src="https://i.ibb.co/31Yfwpm/f-letter.png"/></span>
+                    <span><h1>Foodigo</h1></span>
                 </div>
-                <Link to="/" className="btn btn-link btnclass">Home</Link>
+                
+                <div className='dropDown'>
+                    <button className='dropbtn'>Shop By Category</button>
+                    <ul className='dropdown-content'>
+                        <li>Link1</li>
+                        <li>Link2</li>
+                    </ul>
+                </div>&nbsp;
+                <Link to="/" className="btn btn-info btnclass">Home</Link>
                 <div id="social">
                     {this.conditionalHeader()}
+                    <Link to= {`/myBasket`} className='btn btn-warning cartButton' onClick={this.proceed}>
+                    <i class="bi bi-cart3">show cart</i>
+                    </Link>
                 </div>
+        
             </header>
         )
     }
