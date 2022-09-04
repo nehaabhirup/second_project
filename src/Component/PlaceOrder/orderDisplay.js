@@ -12,7 +12,6 @@ const OrderDisplay = (props) => {
                         <td>{item.email}</td>
                         <td>{item.phone}</td>
                         <td>Rs. {item.cost}</td>
-                        <td>{item.date}</td>
                         <td>{item.status}</td>
                         <td>{item.bank_name}</td>
                     </tr>
@@ -31,7 +30,6 @@ const OrderDisplay = (props) => {
                         <th>Email</th>  
                         <th>Phone</th>  
                         <th>Cost</th>  
-                        <th>Date</th>  
                         <th>Status</th>   
                         <th>BankName</th>  
                     </tr>

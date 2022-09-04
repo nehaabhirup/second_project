@@ -6,7 +6,7 @@
     width:212px;
 }
 .tile-div{
-    height: 390px;
+    height: 470px;
 }
 .dropBtn{
     height: 40px;
@@ -61,14 +61,7 @@
     border: 1px solid black;
 }
 .show-btn{
-    height: 28px;
-    width: 7%;
-    border: none;
-    font-size: 13px;
     margin-top: 1%;
-    float: right;
-    margin-right: 5px;
-    background-color: lightgreen;
 }
 .card{
     float:left;

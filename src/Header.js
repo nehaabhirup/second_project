@@ -19,7 +19,7 @@ class Header extends Component{
     sessionStorage.setItem('loginStatus',false)
     this.setState({userData:''})
     this.props.history.push('/')
-}
+    }
     
 
     proceed = () => {
@@ -36,7 +36,7 @@ class Header extends Component{
                 <>
                     <div className="btnlogin">
                         <Link to="/" className="btn btn-success">
-                            <span className="glyphicon glyphicon-user"></span>{data.name}
+                            <span className="glyphicon glyphicon-user"></span> Hi {data.name}
                         </Link>
                     </div> &nbsp;
                     <div className="btnlogin">
@@ -68,17 +68,9 @@ class Header extends Component{
         return(
             <header>
                 <div id="icon">
-                    <span><img src="https://i.ibb.co/31Yfwpm/f-letter.png"/></span>
-                    <span><h1>Foodigo</h1></span>
+                   <span><img src="https://i.ibb.co/31Yfwpm/f-letter.png"/></span>
+                   <span><h1>Foodigo</h1></span>
                 </div>
-                
-                <div className='dropDown'>
-                    <button className='dropbtn'>Shop By Category</button>
-                    <ul className='dropdown-content'>
-                        <li>Link1</li>
-                        <li>Link2</li>
-                    </ul>
-                </div>&nbsp;
                 <Link to="/" className="btn btn-info btnclass">Home</Link>
                 <div id="social">
                     {this.conditionalHeader()}

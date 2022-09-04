@@ -1,8 +1,7 @@
 import React,{Component} from 'react';
 import ListingDisplay from './listingDisplay';
-import Filter from '../filters/filter';
 
-const prodUrl = "https://snacksapp.herokuapp.com/item"
+const prodUrl = "https://snacksapp.herokuapp.com/filters?product_id="
 
 class Listing extends Component{
 
@@ -17,7 +16,7 @@ class Listing extends Component{
 
     addToCart = (data) => {
         this.setState({userItem:data});
-        sessionStorage.setItem('items',this.state.userItem);
+        sessionStorage.setItem('list',this.state.userItem);
     }
 
     render(){
@@ -25,12 +24,6 @@ class Listing extends Component{
         return(
             <>
                 <div className='row'>
-                
-                    <div id='filter'>
-                        <h4>Filters</h4>
-                        <hr/>
-                        <Filter/>
-                    </div>
                     <ListingDisplay listData={this.state.items}
                     finalOrder={(data) => {this.addToCart(data)}}/>
                 </div>
@@ -39,7 +32,8 @@ class Listing extends Component{
     }
 
     componentDidMount(){
-        fetch(prodUrl,{method:'GET'})
+        let productId = this.props.location.search.split('=')[1];
+        fetch(`${prodUrl}/${productId}`,{method:'GET'})
         .then((res) => res.json())
         .then((data) => {
             this.setState({items:data})

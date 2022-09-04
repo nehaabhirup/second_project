@@ -1,8 +1,9 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
-const ProductFilter = (props) => {
-    const renderFilter = ({filterData}) =>{
+class ProductFilter extends Component {
+
+    renderFilter = ({filterData}) =>{
         if(filterData){
 
             if(filterData){
@@ -12,7 +13,7 @@ const ProductFilter = (props) => {
                         <div key={item.category_id}>
                             <ul className='list-group'>
                                 <li className="list-group-item">{item.name}</li>
-                                <li className='list-group-item filter-group'>{item.productTypes.map(option =><label><Link to={`/products/${option.product_id}`}>{option.product_name}</Link></label>)}</li>
+                                <li className='list-group-item filter-group'>{item.productTypes[0].map(option =><label><Link to={`/listing?productId=${option.product_id}`}>{option.product_name}</Link></label>)}</li>
                             </ul>
                         </div>
                     )
@@ -20,11 +21,14 @@ const ProductFilter = (props) => {
             }
         }
     }
-    return(
-        <ul>
-            {renderFilter(props)}
-        </ul>
-    )
+    render(){
+        
+        return(
+            <ul>
+                {this.renderFilter(this.props)}
+            </ul>
+        )
+    }
 }
 
 export default ProductFilter;

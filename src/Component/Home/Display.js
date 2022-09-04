@@ -42,16 +42,16 @@ class Display extends Component{
                 </div>
             </div>
             <div className="container">
-                <div className="tile-div">
+                <div className="tile-div" onChange={this.selectCost}>
                   <Link to={`/listing`}>
-                    <button className="button show-btn">Show More</button>
+                    <button type="button" className="btn btn-warning show-btn">Show More</button>
                   </Link>
                   <div className="title">Fruits and Vegetables</div>
                   <div className="card cardDiv">
                     <img className="card-img-top" src="pictures/banana.jpg" alt="Card image"/>
                     <div className="card-body">
                       <form name="myform">
-                        <select className="dropBtn" onChange={this.selectCost}>
+                        <select className="dropBtn">
                           <option value="Rs.44">1 kg-Rs 44</option>
                           <option value="Rs.22">500 g-Rs 22</option>
                         </select>
@@ -70,7 +70,7 @@ class Display extends Component{
                     <img className="card-img-top" src="pictures/beans.jpg" alt="Card image"/>
                     <div className="card-body">
                       <form name="myform">
-                        <select className="dropBtn" onChange={this.selectCost}>
+                        <select className="dropBtn">
                           <option value="Rs.60">1 kg-Rs 60</option>
                           <option value="Rs.30">500 g-Rs 30</option>
                         </select>
@@ -89,7 +89,7 @@ class Display extends Component{
                     <img className="card-img-top" src="pictures/capsicum.jpg" alt="Card image"/>
                     <div className="card-body">
                       <form name="myform">
-                        <select className="dropBtn" onChange={this.selectCost}>
+                        <select className="dropBtn">
                           <option value="Rs.102">1 kg-Rs 102</option>
                           <option value="Rs.51">500 g-Rs 51</option>
                         </select>
@@ -108,7 +108,7 @@ class Display extends Component{
                     <img className="card-img-top" src="pictures/flower.jpg" alt="Card image"/>
                     <div className="card-body">
                       <form name="myform">
-                        <select className="dropBtn" onChange={this.selectCost}>
+                        <select className="dropBtn">
                           <option value="Rs.58">1 kg-Rs 58</option>
                           <option value="Rs.29">500 g-Rs 29</option>
                         </select>
@@ -127,7 +127,7 @@ class Display extends Component{
                     <img className="card-img-top" src="pictures/ging.jpg" alt="Card image"/>
                     <div className="card-body">
                       <form name="myform">
-                        <select className="dropBtn" onChange={this.selectCost}>
+                        <select className="dropBtn">
                           <option value="Rs.28">500 g-Rs 28</option>
                           <option value="Rs.14">250 g-Rs 14</option>
                         </select>

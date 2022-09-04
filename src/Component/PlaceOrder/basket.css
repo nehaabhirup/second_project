@@ -1,11 +1,13 @@
 .orderItems{
-    float:left;
+    display: inline-block;
     height:250px;
     width:280px;
     margin:2%;
     box-shadow:10px 10px 20px gray;
 }
-
+.cartBody{
+    margin-left: 5px;
+}
 .orderItems>img{
    height:180px;
    width:100%

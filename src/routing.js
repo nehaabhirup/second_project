@@ -4,7 +4,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './Component/Home/Home';
 import Listing from './Component/listing1/listing';
-import Product from './Component/listing2/products';
 import Basket from './Component/PlaceOrder/basket';
 import ViewOrder from './Component/PlaceOrder/viewOrder';
 import Login from './Component/login/loginComponent';
@@ -17,7 +16,6 @@ const Routing = () => {
             <Header/>
                 <Route exact path="/" component={Home}/>
                 <Route path="/listing" component={Listing}/>
-                <Route path="/products/:id" component={Product}/>
                 <Route path="/myBasket" component={Basket}/>
                 <Route path="/viewBooking" component={ViewOrder}/>
                 <Route path="/login" component={Login}/>

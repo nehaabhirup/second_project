@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import './basket.css';
 
-const url = "https://snacksapp.herokuapp.com/productItem";
+const url = "https://snacksapp.herokuapp.com/listItem";
 const purl = "https://snacksapp.herokuapp.com/placeOrder";
 
 class Basket extends Component{
@@ -29,10 +29,10 @@ class Basket extends Component{
         if(data){
             return data.map((item) => {
                 return(
-                    <div className='orderItems' key={item.list_Id}>
+                    <div className='orderItems' key={item.prod_id}>
 
-                        <img src={item.image_thumb} alt={item.list_name}/>
-                        <h5>{item.list_name}</h5>
+                        <img src={item.image_url} alt={item.name}/>
+                        <h5>{item.name}</h5>
                         <h5>Rs. {item.item_price}</h5>
                     </div>
                 )
@@ -42,7 +42,7 @@ class Basket extends Component{
 
     checkout = () => {
         let obj = this.state;
-        obj.pickedItem = sessionStorage.getItem('items')
+        obj.pickedItem = sessionStorage.getItem('list')
         fetch(purl,{
             method:'POST',
             headers:{
@@ -51,8 +51,8 @@ class Basket extends Component{
             },
             body:JSON.stringify(obj)
         })
-        //.then(this.props.history.push('/viewBooking'))
-        .then(console.log('order Added'))
+        .then(this.props.history.push('/viewBooking'))
+        //.then(console.log('order Added'))
     } 
     render(){
         return(
@@ -62,9 +62,7 @@ class Basket extends Component{
                       <center><h4>My Basket</h4></center>  
                     </div>
                     <div className='cartBody'>
-                        <form action="https://merapayment.herokuapp.com/paynow" method="POST">
-                        <input type="hidden" name="cost" value={this.state.cost}/>
-                        <input type="hidden" name="id" value={this.state.id}/>
+            
                         <div className="row">
                             <div className="form-group col-md-6">
                                 <label for="fname">Name</label>
@@ -94,13 +92,13 @@ class Basket extends Component{
                             </div>
                         </div>
                         <div className='costBtn'><button className='btn btn-success' onClick={this.checkout}>CheckOut</button></div>
-                        </form>
+                        
                     </div>
             </div>
         )
     }
     componentDidMount(){
-        let pickedItem = sessionStorage.getItem('items');
+        let pickedItem = sessionStorage.getItem('list');
         let orderId = [];
         pickedItem.split(',').map((item) => {
             orderId.push(parseInt(item));

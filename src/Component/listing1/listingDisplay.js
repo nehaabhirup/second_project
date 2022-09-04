@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import './listing.css';
 
-class ListingDisplay extends Component {
+class ListingDisplay extends Component{
 
     orderId= [];
 
@@ -19,31 +19,31 @@ class ListingDisplay extends Component {
             })
         }
     }
-
+    
     renderData = ({listData}) => {
+        
         if(listData){
             if(listData.length>0){
                 return listData.map((item) => {
                     return(
-                        <div key={item.list_Id}>
+                        <div key={item.prod_id}>
                             <div className="tile">
                                 <div className='imgDiv'>
-                                    <img src={item.image_thumb} className="Image" alt="item-img"/>
+                                    <img src={item.image_url} className="Image" alt="item-img"/>
                                 </div>
                                 <div className='contentDiv'>
                                     <div className='img_name'>
-                                        <h6 style={{fontWeight:'400'}}>{item.list_name}</h6>
+                                        <h6 style={{fontWeight:'400'}}>{item.name}</h6>
                                     </div>
                                     <select className='dropdown'>
                                         <option>{item.ddl_value1}</option>
                                         <option>{item.ddl_value2}</option>
                                     </select>
-                                    <div className='price'>Rs.{item.item_price}</div>
+                                    <div className='price' id='price'>Rs.{item.item_price}</div>
                                     <div className='delivery'>{item.delivery}</div>
                                     <div className='time'>{item.time}</div>
                                     <div className='addbtn'>
-                                        <button className='btn btn-success' 
-                                        onClick={() => {this.placeOrder(item.list_Id)}}>Add</button>
+                                        <button className='btn btn-success' onClick={() => {this.placeOrder(item.prod_id)}}>Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -57,15 +57,14 @@ class ListingDisplay extends Component {
     render(){
         return(
             <>
-            <div id="content">
+                <div id="content">
                 {this.renderData(this.props)}
-            </div>
-            <div className='cartdetails'>
-                Item Number {this.renderCart(this.orderId)} Added
-            </div>
+                </div>
+                <div className='cartdetails'>
+                    Item Number {this.renderCart(this.orderId)} Added
+                </div>
             </>
         )
     }
-    
 }
-export default ListingDisplay;
+export default ListingDisplay
